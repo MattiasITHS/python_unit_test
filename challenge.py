@@ -6,7 +6,16 @@ After writing your tests, develop the counter function as needed to pass all you
 
 
 def counter(name):
-    # Todo: implement me
-    return len(name)
+
+    if name == None:
+        raise AttributeError("You cannot input None values")
+    name = name.replace(' ','')
+    if len(name) == 0:
+        raise Exception("Please input your name")
+    if name.isalpha():
+        return len(name)
+    else:
+        raise Exception("Teh string must contain eng letters")
+
 
 
