@@ -1,3 +1,4 @@
+import unittest
 from unittest import TestCase
 from sixth_challenge import ListChanger
 
@@ -19,6 +20,7 @@ class TestListChanger(TestCase):
         result1 =  self._list_changer_obj_2.has_duplicates()
         self.assertEqual(result1, False)
 
+    @unittest.skip ("testing to skip")
     def test_smallest_number(self):
         result = self._list_changer_obj_1.smallest_number()
         self.assertEqual(result, 1)
